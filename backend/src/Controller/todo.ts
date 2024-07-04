@@ -14,6 +14,7 @@ export const addNewPost = async (req: Request, res: Response) => {
         const data = await Todo.create({desc}) 
         res.status(200).json({"msg":"added post"})
     } catch (error) {
+        //@ts-ignore
         res.json(handlerror(error))
     }
 }
@@ -22,6 +23,7 @@ export const  getTodo = async (req: Request, res: Response) => {
         const data = await Todo.find().limit(10)
         res.status(200).json({"msg":data})
     } catch (error) {
+        //@ts-ignore
         res.json(handlerror(error))
     }
 }

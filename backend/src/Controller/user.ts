@@ -16,7 +16,9 @@ const handlerror = (err: any) => {
   }
 
   if (err.message.includes("User validation failed")) {
+    // @ts-ignore
     Object.values(err.errors).forEach(({ properties }) => {
+      //@ts-ignore
       errors[properties.path] = properties.message;
       // console.log(properties)
     });
