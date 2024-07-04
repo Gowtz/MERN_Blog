@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5173"
+    origin: process.env.FRONT_URL
 }))
 app.use(experess.json())
 app.use(cookieParser())
