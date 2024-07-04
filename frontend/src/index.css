@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn{
+  @apply px-7 py-3 rounded bg-blue-400 text-white text-xl cursor-pointer
+}
