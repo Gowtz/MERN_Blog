@@ -6,6 +6,7 @@ export default function SignUp({ signUp }: any) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+    // @ts-ignore
   const {setUser} = useAuth();
 
   const handleSubmit = async () => {
@@ -16,7 +17,9 @@ export default function SignUp({ signUp }: any) {
         withCredentials: true,
       }
     ).then((data)=>setUser(data.data))
-    signUp((prev: Boolean) => false);
+      // @ts-ignore
+
+    signUp((prev: Boolean) => prev = false);
   };
   return (
     <>

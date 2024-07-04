@@ -13,6 +13,7 @@ export default function Addpost({ toggle }) {
         withCredentials:true
     })
 
+  // @ts-ignore
 
     toggle((prev:Boolean) => false);
   };

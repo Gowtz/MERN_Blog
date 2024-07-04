@@ -2,7 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../lib/UserContext";
 
-export default function SignIn({ signIn }) {
+export default function SignIn({ signIn }:any) {
+    // @ts-ignore
   const { setUser } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +22,7 @@ export default function SignIn({ signIn }) {
           }
         )
         .then((data) => setUser(data.data));
-      signIn((prev) => !prev);
+      signIn((prev:Boolean) => !prev);
     } catch (err) {}
   };
   return (

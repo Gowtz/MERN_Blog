@@ -5,7 +5,8 @@ import { useAuth } from "../lib/UserContext";
 
 
 export default function Header({ toggle, setSignUp, setSignIn }: any) {
-  const {user,setUser} = useAuth();
+  // @ts-ignore
+  const {user ,setUser} = useAuth();
   const handleLogout = async () => {
     await axios
       .post(
@@ -52,13 +53,16 @@ export default function Header({ toggle, setSignUp, setSignIn }: any) {
               <>
                 <div
                   className="btn "
-                  onClick={()=>setSignIn((prev: Boolean) => true)}
+                    // @ts-ignore
+                  onClick={()=>setSignIn((prev: Boolean) => prev=true)}
                 >
                   Login In
                 </div>
                 <div
                   className="btn "
-                  onClick={()=>setSignUp((prev: Boolean) => true)}
+                    // @ts-ignore
+
+                  onClick={()=>setSignUp((prev: Boolean) => prev = true)}
                 >
                   Sign Up
                 </div>
