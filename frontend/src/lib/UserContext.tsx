@@ -11,7 +11,9 @@ export default function UserContext({ children }: any) {
 
     useEffect(() => {
         async function getUser() {
-            await axios.get("http://localhost:6969/authenticate",{
+            console.log(import.meta.env.VITE_BASE_URL+"/")
+            
+            await axios.get(`${import.meta.env.VITE_BASE_URL}/authenticate`,{
                 withCredentials:true
             }).then(data => {
                 if (data.data.id) {

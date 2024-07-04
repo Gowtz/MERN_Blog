@@ -4,7 +4,7 @@ import User from "../Model/user";
 
 export const auth = async (req: Request, res: Response, next: NextFunction) => {
   const token = req.cookies.jwt;
-  // console.log(token)
+  console.log(token)
   jwt.verify(
     token,
     process.env.JWT_SECRET,

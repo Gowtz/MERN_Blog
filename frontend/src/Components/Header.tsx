@@ -9,7 +9,7 @@ export default function Header({ toggle, setSignUp, setSignIn }: any) {
   const handleLogout = async () => {
     await axios
       .post(
-        "http://localhost:6969/auth/logout",
+        `${import.meta.env.VITE_BASE_URL}/auth/logout`,
         {},
         {
           withCredentials: true,

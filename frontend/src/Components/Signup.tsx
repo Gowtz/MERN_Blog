@@ -10,7 +10,7 @@ export default function SignUp({ signUp }: any) {
 
   const handleSubmit = async () => {
     await axios.post(
-      "http://localhost:6969/auth/signup",
+      `${import.meta.env.VITE_BASE_URL}auth/signup`,
       { name, email, password },
       {
         withCredentials: true,

@@ -11,7 +11,7 @@ export default function SignIn({ signIn }) {
     try {
       await axios
         .post(
-          "http://localhost:6969/auth/signin",
+          `${import.meta.env.VITE_BASE_URL}/auth/signin`,
           {
             email,
             password,

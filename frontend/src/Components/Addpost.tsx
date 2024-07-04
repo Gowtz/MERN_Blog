@@ -7,7 +7,7 @@ export default function Addpost({ toggle }) {
   const [desc, setDesc] = useState("");
   const handleSubmit = async() => {
 
-    await axios.post("http://localhost:6969/post",{
+    await axios.post(`${import.meta.env.VITE_BASE_URL}/post`,{
         title,desc
     },{
         withCredentials:true

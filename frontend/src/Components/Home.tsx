@@ -10,7 +10,7 @@ export default function Home() {
     try {
       async function fetchPost() {
         await axios
-          .get("http://localhost:6969/post", {
+          .get(`${import.meta.env.VITE_BASE_URL}/post`, {
             withCredentials: true,
           })
           .then((data) => setPosts((prev) => data.data))
