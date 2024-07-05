@@ -51,7 +51,7 @@ export default function SignIn({ signIn }:any) {
             }}
             value={password}
             className="py-3 px-5 rounded mb-5"
-            type="email"
+            type="password"
             placeholder="Password Here"
           />
           <button

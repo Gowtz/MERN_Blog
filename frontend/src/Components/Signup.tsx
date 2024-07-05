@@ -11,7 +11,7 @@ export default function SignUp({ signUp }: any) {
 
   const handleSubmit = async () => {
     await axios.post(
-      `${import.meta.env.VITE_BASE_URL}auth/signup`,
+      `${import.meta.env.VITE_BASE_URL}/auth/signup`,
       { name, email, password },
       {
         withCredentials: true,
@@ -37,7 +37,7 @@ export default function SignUp({ signUp }: any) {
             }}
             value={name}
             className="py-3 px-5 rounded mb-5"
-            type="email"
+            type="text"
             placeholder="Email Here"
           />
           <label className="text-2xl mb-2">Email</label>
